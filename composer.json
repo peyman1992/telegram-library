@@ -3,7 +3,7 @@
   "description": "a route base telegram library for laravel",
   "type": "library",
   "license": "MIT",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "autoload": {
     "psr-4": {
       "Peyman1992\\TelegramLibrary\\": "src/"
@@ -21,7 +21,7 @@
   "require": {
     "php": "^8.1",
     "laravel/framework": "^9.21|^10.0",
-    "irazasyed/telegram-bot-sdk": "^3.0"
+    "irazasyed/telegram-bot-sdk": "@dev"
   },
   "extra": {
     "laravel": {
