@@ -6,11 +6,11 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework;
+namespace Peyman1992\TelegramLibrary;
 
 use Closure;
 use Illuminate\Contracts\Container\Container;
-use Peyman1992\TelegramFramework\Injector\DependencyInjector;
+use Peyman1992\TelegramLibrary\Injector\DependencyInjector;
 use Telegram\Bot\Objects\Update;
 
 class PipeLine

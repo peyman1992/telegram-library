@@ -6,7 +6,7 @@
  * Time: 8:59 PM
  */
 
-namespace Peyman1992\TelegramFramework\Injector\Exceptions;
+namespace Peyman1992\TelegramLibrary\Injector\Exceptions;
 
 class EloquentNotFoundException extends DependencyInjectionException
 {

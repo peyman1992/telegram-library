@@ -6,7 +6,7 @@
  * Time: 9:01 PM
  */
 
-namespace Peyman1992\TelegramFramework\Injector\Exceptions;
+namespace Peyman1992\TelegramLibrary\Injector\Exceptions;
 
 class CallFunctionInjectionException extends DependencyInjectionException
 {

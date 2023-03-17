@@ -9,18 +9,18 @@
  * Time: 8:09 PM
  */
 
-namespace Peyman1992\TelegramFramework\Injector;
+namespace Peyman1992\TelegramLibrary\Injector;
 
 use Exception;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Database\Eloquent\Model;
-use Peyman1992\TelegramFramework\Injector\Exceptions\CallFunctionInjectionException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\CallMethodInjectionException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\CallStaticMethodInjectionException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\CreateClassInjectionException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\EloquentInjectionException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\EloquentNotFoundException;
-use Peyman1992\TelegramFramework\Injector\Exceptions\ResolveParameterException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\CallFunctionInjectionException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\CallMethodInjectionException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\CallStaticMethodInjectionException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\CreateClassInjectionException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\EloquentInjectionException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\EloquentNotFoundException;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\ResolveParameterException;
 use ReflectionClass;
 use ReflectionFunction;
 use ReflectionMethod;

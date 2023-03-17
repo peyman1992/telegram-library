@@ -6,12 +6,12 @@
  * Time: 7:27 PM
  */
 
-namespace Peyman1992\TelegramFramework\Router;
+namespace Peyman1992\TelegramLibrary\Router;
 
 use Exception;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Facades\Config;
-use Peyman1992\TelegramFramework\PipeLine;
+use Peyman1992\TelegramLibrary\PipeLine;
 use ReflectionClass;
 use Telegram\Bot\Objects\Update;
 use function base_path;

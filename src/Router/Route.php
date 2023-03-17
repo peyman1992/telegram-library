@@ -6,14 +6,14 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Router;
+namespace Peyman1992\TelegramLibrary\Router;
 
 use Closure;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Facades\Config;
-use Peyman1992\TelegramFramework\Injector\DependencyInjector;
-use Peyman1992\TelegramFramework\Injector\Exceptions\DependencyInjectionException;
-use Peyman1992\TelegramFramework\Traits\CheckerTrait;
+use Peyman1992\TelegramLibrary\Injector\DependencyInjector;
+use Peyman1992\TelegramLibrary\Injector\Exceptions\DependencyInjectionException;
+use Peyman1992\TelegramLibrary\Traits\CheckerTrait;
 use Telegram\Bot\Objects\Update;
 
 class Route

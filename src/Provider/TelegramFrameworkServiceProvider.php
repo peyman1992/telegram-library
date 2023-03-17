@@ -1,14 +1,14 @@
 <?php
 
-namespace Peyman1992\TelegramFramework\Provider;
+namespace Peyman1992\TelegramLibrary\Provider;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\ServiceProvider;
-use Peyman1992\TelegramFramework\Injector\DependencyInjector;
-use Peyman1992\TelegramFramework\Router\Router;
-use Peyman1992\TelegramFramework\Session\TelegramSessionManager;
+use Peyman1992\TelegramLibrary\Injector\DependencyInjector;
+use Peyman1992\TelegramLibrary\Router\Router;
+use Peyman1992\TelegramLibrary\Session\TelegramSessionManager;
 
-class TelegramFrameworkServiceProvider extends ServiceProvider
+class TelegramLibraryServiceProvider extends ServiceProvider
 {
     public function register()
     {

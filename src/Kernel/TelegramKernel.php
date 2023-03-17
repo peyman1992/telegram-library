@@ -6,13 +6,13 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Kernel;
+namespace Peyman1992\TelegramLibrary\Kernel;
 
 use Illuminate\Contracts\Container\Container;
-use Peyman1992\TelegramFramework\Interfaces\ErrorHandler;
-use Peyman1992\TelegramFramework\PipeLine;
-use Peyman1992\TelegramFramework\Request\Request;
-use Peyman1992\TelegramFramework\Router\Router;
+use Peyman1992\TelegramLibrary\Interfaces\ErrorHandler;
+use Peyman1992\TelegramLibrary\PipeLine;
+use Peyman1992\TelegramLibrary\Request\Request;
+use Peyman1992\TelegramLibrary\Router\Router;
 use Telegram\Bot\Api;
 use Telegram\Bot\Objects\Update;
 use Throwable;

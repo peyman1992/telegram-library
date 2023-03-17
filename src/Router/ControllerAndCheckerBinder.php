@@ -6,7 +6,7 @@
  * Time: 7:36 PM
  */
 
-namespace Peyman1992\TelegramFramework\Router;
+namespace Peyman1992\TelegramLibrary\Router;
 
 class ControllerAndCheckerBinder
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Peyman1992\TelegramFramework\Session;
+namespace Peyman1992\TelegramLibrary\Session;
 
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Support\Manager;

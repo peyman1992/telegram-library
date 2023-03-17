@@ -6,7 +6,7 @@
  * Time: 12:09 AM
  */
 
-namespace Peyman1992\TelegramFramework\Session\Exceptions;
+namespace Peyman1992\TelegramLibrary\Session\Exceptions;
 
 use Exception;
 

@@ -6,10 +6,10 @@
  * Time: 11:19 PM
  */
 
-namespace Peyman1992\TelegramFramework\Handler;
+namespace Peyman1992\TelegramLibrary\Handler;
 
 use Longman\TelegramBot\Entities\Update;
-use Peyman1992\TelegramFramework\Interfaces\ErrorHandler;
+use Peyman1992\TelegramLibrary\Interfaces\ErrorHandler;
 
 abstract class AbstractErrorHandler implements ErrorHandler
 {

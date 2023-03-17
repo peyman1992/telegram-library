@@ -6,7 +6,7 @@
  * Time: 12:03 AM
  */
 
-namespace Peyman1992\TelegramFramework\Interfaces;
+namespace Peyman1992\TelegramLibrary\Interfaces;
 
 use Longman\TelegramBot\Entities\Update;
 

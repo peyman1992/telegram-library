@@ -6,11 +6,11 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Facade;
+namespace Peyman1992\TelegramLibrary\Facade;
 
 use Closure;
 use Illuminate\Support\Facades\Facade;
-use Peyman1992\TelegramFramework\Router\Router;
+use Peyman1992\TelegramLibrary\Router\Router;
 
 /**
  * @method static register(Closure|array $checker, Closure|array $controller)

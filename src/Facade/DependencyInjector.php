@@ -6,10 +6,10 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Facade;
+namespace Peyman1992\TelegramLibrary\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use Peyman1992\TelegramFramework\Injector\DependencyInjector as DependencyInjectorAlias;
+use Peyman1992\TelegramLibrary\Injector\DependencyInjector as DependencyInjectorAlias;
 
 class DependencyInjector extends Facade
 {

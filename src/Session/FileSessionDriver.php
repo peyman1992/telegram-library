@@ -6,7 +6,7 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Session;
+namespace Peyman1992\TelegramLibrary\Session;
 
 use Exception;
 use Illuminate\Support\Facades\File;

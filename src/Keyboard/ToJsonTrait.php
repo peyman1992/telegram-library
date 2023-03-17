@@ -1,6 +1,6 @@
 <?php
 
-namespace Peyman1992\TelegramFramework\Keyboard;
+namespace Peyman1992\TelegramLibrary\Keyboard;
 
 use Illuminate\Database\Eloquent\JsonEncodingException;
 use function get_class;

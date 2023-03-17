@@ -6,9 +6,9 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Session;
+namespace Peyman1992\TelegramLibrary\Session;
 
-use Peyman1992\TelegramFramework\Session\Exceptions\InvalidJsonException;
+use Peyman1992\TelegramLibrary\Session\Exceptions\InvalidJsonException;
 
 abstract class SessionDriver
 {

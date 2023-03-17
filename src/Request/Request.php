@@ -6,7 +6,7 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Request;
+namespace Peyman1992\TelegramLibrary\Request;
 
 use Exception;
 use Illuminate\Contracts\Container\Container;

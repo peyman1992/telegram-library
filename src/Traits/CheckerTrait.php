@@ -6,7 +6,7 @@
  * Time: 4:16 PM
  */
 
-namespace Peyman1992\TelegramFramework\Traits;
+namespace Peyman1992\TelegramLibrary\Traits;
 
 trait CheckerTrait
 {

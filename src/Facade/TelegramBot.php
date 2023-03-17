@@ -6,7 +6,7 @@
  * Time: 11:26 PM
  */
 
-namespace Peyman1992\TelegramFramework\Facade;
+namespace Peyman1992\TelegramLibrary\Facade;
 
 use Illuminate\Support\Facades\Facade;
 use Telegram\Bot\Objects\ChatMember;

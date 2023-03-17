@@ -1,6 +1,6 @@
 <?php
 
-namespace Peyman1992\TelegramFramework\Injector\Exceptions;
+namespace Peyman1992\TelegramLibrary\Injector\Exceptions;
 
 class DependencyInjectionException extends \Exception
 {
