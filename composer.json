@@ -26,10 +26,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Peyman1992\\TelegramFramework\\Provider\\TelegramFrameworkServiceProvider"
+        "Peyman1992\\TelegramLibrary\\Provider\\TelegramFrameworkServiceProvider"
       ],
       "aliases": {
-        "TelegramRoute": "Peyman1992\\TelegramFramework\\Facade\\TelegramRoute"
+        "TelegramRoute": "Peyman1992\\TelegramLibrary\\Facade\\TelegramRoute"
       }
     }
   }
