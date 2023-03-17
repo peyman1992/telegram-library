@@ -6,7 +6,7 @@
   "version": "0.1.1",
   "autoload": {
     "psr-4": {
-      "Peyman1992\\TelegramFramework\\": "src/"
+      "Peyman1992\\TelegramLibrary\\": "src/"
     },
     "files": [
       "functions/functions.php"
