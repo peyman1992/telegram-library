@@ -1,6 +1,6 @@
 {
-  "name": "peyman1992/telegram-framework",
-  "description": "a route base telegram framework for laravel",
+  "name": "peyman1992/telegram-library",
+  "description": "a route base telegram library for laravel",
   "type": "library",
   "license": "MIT",
   "version": "0.1.1",
