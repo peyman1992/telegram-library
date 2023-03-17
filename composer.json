@@ -1,0 +1,36 @@
+{
+  "name": "peyman1992/telegram-framework",
+  "description": "a route base telegram framework for laravel",
+  "type": "library",
+  "license": "MIT",
+  "version": "0.1.1",
+  "autoload": {
+    "psr-4": {
+      "Peyman1992\\TelegramFramework\\": "src/"
+    },
+    "files": [
+      "functions/functions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Peyman Mohsenzadeh",
+      "email": "peyman_m1992@yahoo.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0.2",
+    "laravel/framework": "^9.21",
+    "irazasyed/telegram-bot-sdk": "^3.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Peyman1992\\TelegramFramework\\Provider\\TelegramFrameworkServiceProvider"
+      ],
+      "aliases": {
+        "TelegramRoute": "Peyman1992\\TelegramFramework\\Facade\\TelegramRoute"
+      }
+    }
+  }
+}
