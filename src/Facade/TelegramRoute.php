@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Facade;
 use Peyman1992\TelegramLibrary\Router\Router;
 
 /**
+ * @method static middleware(array $middleware)
+ * @method static group(Closure $closure)
  * @method static register(Closure|array $checker, Closure|array $controller)
  * @method static registerNotFound(Closure|array $controller)
  */
