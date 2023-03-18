@@ -13,6 +13,7 @@ use Telegram\Bot\Objects\ChatMember;
 use Telegram\Bot\Objects\Message;
 
 /**
+ * @method static Message editMessageText(array $properties)
  * @method static Message sendMessage(array $properties)
  * @method static Message sendPhoto(array $properties)
  * @method static Message sendVideo(array $properties)
