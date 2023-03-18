@@ -35,7 +35,7 @@ class Request
 
     public function getUpdates(): void
     {
-        if (config('telegram-framework.get_update_from_web_hook')) {
+        if (config('telegram-library.get_update_from_web_hook')) {
             $this->getWebHookUpdates();
         } else {
             $this->getLongPollingUpdates();

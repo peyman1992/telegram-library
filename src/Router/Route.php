@@ -45,7 +45,7 @@ class Route
     public function middleware($middlewares): static
     {
         if (is_string($middlewares)) {
-            $middlewareArray = Config::get("telegram-framework.middlewares.{$middlewares}");
+            $middlewareArray = Config::get("telegram-library.middlewares.{$middlewares}");
         } else {
             $middlewareArray = $middlewares;
         }
@@ -96,8 +96,8 @@ class Route
             if ($e instanceof DependencyInjectionException) {
                 throw $e;
             }
-//            if (config('telegram-framework.report_checker_exceptions')) {
-            if (config('telegram-framework.debug_mode')) {
+//            if (config('telegram-library.report_checker_exceptions')) {
+            if (config('telegram-library.debug_mode')) {
                 throw $e;
             } else {
                 return FALSE;

@@ -53,7 +53,7 @@ class TelegramKernel
         $this->increaseUpdateId = $increaseUpdateId;
         $this->router = $container->make(Router::class);
         $this->request = $this->container->make(Request::class);
-        $this->middleware = config('telegram-framework.middlewares.globals');
+        $this->middleware = config('telegram-library.middlewares.globals');
     }
 
     public function handle(string $routeFileName): void
@@ -80,7 +80,7 @@ class TelegramKernel
                 }
             }
         } else {
-            if (config('telegram-framework.debug_mode')) {
+            if (config('telegram-library.debug_mode')) {
                 dump("no telegram update available.");
             }
         }

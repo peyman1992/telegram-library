@@ -37,13 +37,13 @@ class TelegramLibraryServiceProvider extends ServiceProvider
             }
         );
 
-        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'telegram-framework');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', 'telegram-library');
     }
 
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../../config/config.php' => config_path('telegram-framework.php'),
+            __DIR__ . '/../../config/config.php' => config_path('telegram-library.php'),
         ]);
     }
 }
