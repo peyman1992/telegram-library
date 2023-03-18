@@ -6,8 +6,8 @@
  * Time: 11:02 PM
  */
 
-use Peyman1992\TelegramFramework\Facade\TelegramBot;
-use Peyman1992\TelegramFramework\Session\TelegramSessionManager;
+use Peyman1992\TelegramLibrary\Facade\TelegramBot;
+use Peyman1992\TelegramLibrary\Session\TelegramSessionManager;
 use Telegram\Bot\Exceptions\TelegramSDKException;
 
 if (!function_exists("sessionTelegram")) {
