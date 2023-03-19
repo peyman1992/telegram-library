@@ -185,7 +185,6 @@ class Router
             $endCallBack = function (Update $update) use ($route) {
                 try {
                     $route->runAction($update);
-//                } catch (EloquentNotFoundException $e) {
                 } catch (Exception $e) {
                     dd($e);
 
