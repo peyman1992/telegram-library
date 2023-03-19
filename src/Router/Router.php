@@ -145,7 +145,9 @@ class Router
     {
         $this->groupIndex = count($this->middlewares);
         $func();
-        $this->groupIndex = --$this->groupIndex;
+        if ($this->groupIndex > 0) {
+            $this->groupIndex = --$this->groupIndex;
+        }
         $this->resetMiddleware();
     }
 
