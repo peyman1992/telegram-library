@@ -10,7 +10,6 @@ namespace Peyman1992\TelegramLibrary\Router;
 
 use Exception;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Support\Facades\Config;
 use Peyman1992\TelegramLibrary\PipeLine;
 use ReflectionClass;
 use Telegram\Bot\Objects\Update;
@@ -127,11 +126,7 @@ class Router
     public function middleware($middlewares): static
     {
         if (is_string($middlewares)) {
-            if (class_exists($middlewares)) {
-                $middlewareArray[] = $middlewares;
-            } else {
-                $middlewareArray = Config::get("travian-framework.middlewares.{$middlewares}");
-            }
+            $middlewareArray[] = $middlewares;
         } else {
             $middlewareArray = $middlewares;
         }
