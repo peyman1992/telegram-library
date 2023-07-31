@@ -34,6 +34,7 @@ class TelegramKernel
             'bot',
             function () use ($botToken) {
                 $api = new Api($botToken);
+
                 return $api;
             }
         );
@@ -56,10 +57,10 @@ class TelegramKernel
         $this->middleware = config('telegram-library.middlewares.globals');
     }
 
-    public function handle(string $routeFileName): void
+    public function handle(string $routeFileName, $fromWebhook = NULL): void
     {
         $this->router->load($routeFileName);
-        $this->request->getUpdates();
+        $this->request->getUpdates($fromWebhook);
         $endCallBack = function (Update $update) {
             $this->router->dispatch($update);
         };

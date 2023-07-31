@@ -15,6 +15,7 @@ use Telegram\Bot\Objects\Update;
 use function array_filter;
 use function config;
 use function count;
+use function is_null;
 use function json_decode;
 use function json_last_error;
 use function json_last_error_msg;
@@ -33,12 +34,20 @@ class Request
         $this->cache = $Container->make("cache");
     }
 
-    public function getUpdates(): void
+    public function getUpdates($fromWebhook = NULL): void
     {
-        if (config('telegram-library.get_update_from_web_hook')) {
-            $this->getWebHookUpdates();
+        if (is_null($fromWebhook)) {
+            if (config('telegram-library.get_update_from_web_hook')) {
+                $this->getWebHookUpdates();
+            } else {
+                $this->getLongPollingUpdates();
+            }
         } else {
-            $this->getLongPollingUpdates();
+            if ($fromWebhook) {
+                $this->getWebHookUpdates();
+            } else {
+                $this->getLongPollingUpdates();
+            }
         }
     }
 
