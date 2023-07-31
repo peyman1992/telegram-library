@@ -11,6 +11,7 @@ namespace Peyman1992\TelegramLibrary\Facade;
 use Illuminate\Support\Facades\Facade;
 use Telegram\Bot\Objects\ChatMember;
 use Telegram\Bot\Objects\Message;
+use Telegram\Bot\Objects\WebhookInfo;
 
 /**
  * @method static Message editMessageText(array $properties)
@@ -20,7 +21,9 @@ use Telegram\Bot\Objects\Message;
  * @method static Message sendDocument(array $properties)
  * @method static ChatMember getChatMember(array $properties)
  * @method static boolean answerCallbackQuery(array $properties)
- * @method static deleteMessage(array $properties)
+ * @method static boolean deleteMessage(array $properties)
+ * @method static boolean setWebhook(array $properties)
+ * @method static WebhookInfo getWebhookInfo(array $properties)
  */
 class TelegramBot extends Facade
 {
