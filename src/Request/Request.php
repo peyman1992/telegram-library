@@ -80,7 +80,11 @@ class Request
 
     private function closeConnection(): void
     {
-        ob_end_clean();
+        try{
+            ob_end_clean();
+        }catch (Exception){
+
+        }
         header("Connection: close");
         ignore_user_abort(TRUE);
         ob_start();
