@@ -86,7 +86,7 @@ if (!function_exists("safeSendDocument")) {
 }
 
 if (!function_exists("safeEditMessageText")) {
-    function safeSendTelegramMessage(array $params): ?\Telegram\Bot\Objects\Message
+    function safeEditMessageText(array $params): ?\Telegram\Bot\Objects\Message
     {
         try {
             return TelegramBot::editMessageText($params);
