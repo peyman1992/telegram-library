@@ -24,6 +24,7 @@ use const JSON_ERROR_NONE;
 
 class Request
 {
+    private string $identifier;
     private Api $bot;
     private \Illuminate\Cache\CacheManager $cache;
     private array $updates;
@@ -32,6 +33,7 @@ class Request
     {
         $this->bot = $Container->make('bot');
         $this->cache = $Container->make("cache");
+        $this->identifier=md5($this->bot->getAccessToken());
     }
 
     public function getUpdates($fromWebhook = NULL): void
@@ -97,9 +99,9 @@ class Request
 
     private function getLongPollingUpdates(): void
     {
-        $identifier=md5($this->bot->getAccessToken());
-        $updateId = $this->cache->get("UPDATE_ID_$identifier");
-        $updateIdTime = $this->cache->get("UPDATE_ID_TIME_$identifier");
+
+        $updateId = $this->cache->get("UPDATE_ID_$this->identifier");
+        $updateIdTime = $this->cache->get("UPDATE_ID_TIME_$this->identifier");
         if ($updateId === NULL) {
             $updateId = 0;
         }
@@ -138,8 +140,8 @@ class Request
             $update = array_shift($this->updates);
             //env("INCREASE_UPDATE_ID", TRUE) &&
             if ($increaseUpdateId) {
-                $this->cache->set("UPDATE_ID", $update->updateId + 1);
-                $this->cache->set("UPDATE_ID_TIME", time());
+                $this->cache->set("UPDATE_ID_$this->identifier", $update->updateId + 1);
+                $this->cache->set("UPDATE_ID_TIME_$this->identifier", time());
             }
         }
 
