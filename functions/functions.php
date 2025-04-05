@@ -43,3 +43,12 @@ if (!function_exists("safeAnswerCallbackQuery")) {
         }
     }
 }
+if (!function_exists("safeCallTelegram")) {
+    function safeCallTelegram(callable $fn): void
+    {
+        try {
+            $fn();
+        } catch (TelegramSDKException) {
+        }
+    }
+}
