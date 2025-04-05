@@ -23,8 +23,8 @@ if (!function_exists("renderView")) {
     }
 }
 
-if (!function_exists("safeDeleteTelegramMessage")) {
-    function safeDeleteTelegramMessage(array $params): bool
+if (!function_exists("safeDeleteMessage")) {
+    function safeDeleteMessage(array $params): bool
     {
         try {
             return TelegramBot::deleteMessage($params);
@@ -43,12 +43,55 @@ if (!function_exists("safeAnswerCallbackQuery")) {
         }
     }
 }
-if (!function_exists("safeCallTelegram")) {
-    function safeCallTelegram(callable $fn): void
+if (!function_exists("safeSendMessage")) {
+    function safeSendMessage(array $params): ?\Telegram\Bot\Objects\Message
     {
         try {
-            $fn();
-        } catch (TelegramSDKException) {
+            return TelegramBot::sendMessage($params);
+        } catch (TelegramSDKException $e) {
+            return null;
+        }
+    }
+}
+
+if (!function_exists("safeSendPhoto")) {
+    function safeSendPhoto(array $params): ?\Telegram\Bot\Objects\Message
+    {
+        try {
+            return TelegramBot::sendPhoto($params);
+        } catch (TelegramSDKException $e) {
+            return null;
+        }
+    }
+}
+if (!function_exists("safeSendVideo")) {
+    function safeSendVideo(array $params): ?\Telegram\Bot\Objects\Message
+    {
+        try {
+            return TelegramBot::sendVideo($params);
+        } catch (TelegramSDKException $e) {
+            return null;
+        }
+    }
+}
+if (!function_exists("safeSendDocument")) {
+    function safeSendDocument(array $params): ?\Telegram\Bot\Objects\Message
+    {
+        try {
+            return TelegramBot::sendDocument($params);
+        } catch (TelegramSDKException $e) {
+            return null;
+        }
+    }
+}
+
+if (!function_exists("safeEditMessageText")) {
+    function safeSendTelegramMessage(array $params): ?\Telegram\Bot\Objects\Message
+    {
+        try {
+            return TelegramBot::editMessageText($params);
+        } catch (TelegramSDKException $e) {
+            return null;
         }
     }
 }
