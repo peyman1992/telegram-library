@@ -97,8 +97,9 @@ class Request
 
     private function getLongPollingUpdates(): void
     {
-        $updateId = $this->cache->get("UPDATE_ID");
-        $updateIdTime = $this->cache->get("UPDATE_ID_TIME");
+        $identifier=md5($this->bot->getAccessToken());
+        $updateId = $this->cache->get("UPDATE_ID_$identifier");
+        $updateIdTime = $this->cache->get("UPDATE_ID_TIME_$identifier");
         if ($updateId === NULL) {
             $updateId = 0;
         }
