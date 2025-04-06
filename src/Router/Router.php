@@ -186,7 +186,7 @@ class Router
                 try {
                     $route->runAction($update);
                 } catch (Exception $e) {
-                    $this->runNotfound($update);
+                    dump($e);
                 }
             };
             $pipeline = new PipeLine($this->container, $update, $endCallBack);
