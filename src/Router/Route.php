@@ -130,7 +130,7 @@ class Route
             $object = $this->dependencyInjector->createClass($className, $parameters);
             ControllerAndCheckerBinder::bind($className, $object);
         }
-        $traits = class_uses($object);
+        $traits = Route::class_uses_with_parents($object);
         if (in_array(CheckerTrait::class, $traits) && $object->ignore === TRUE) {
             return FALSE;
         }
@@ -142,4 +142,19 @@ class Route
     {
         return $this->dependencyInjector->callClosure($func, $parameter);
     }
+    private static function class_uses_with_parents($class): array {
+        if (is_object($class)) {
+            $class = get_class($class);
+        }
+
+        $traits = [];
+
+        do {
+            $traits += class_uses($class);
+        } while ($class = get_parent_class($class));
+
+        return array_unique($traits);
+    }
 }
+
+

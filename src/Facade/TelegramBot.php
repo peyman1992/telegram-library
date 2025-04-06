@@ -9,21 +9,32 @@
 namespace Peyman1992\TelegramLibrary\Facade;
 
 use Illuminate\Support\Facades\Facade;
+use Telegram\Bot\Exceptions\TelegramSDKException;
 use Telegram\Bot\Objects\ChatMember;
 use Telegram\Bot\Objects\Message;
 use Telegram\Bot\Objects\WebhookInfo;
 
 /**
  * @method static Message editMessageText(array $properties)
+ * @throws TelegramSDKException
  * @method static Message sendMessage(array $properties)
+ * @throws TelegramSDKException
  * @method static Message sendPhoto(array $properties)
+ * @throws TelegramSDKException
  * @method static Message sendVideo(array $properties)
+ * @throws TelegramSDKException
  * @method static Message sendDocument(array $properties)
+ * @throws TelegramSDKException
  * @method static ChatMember getChatMember(array $properties)
+ * @throws TelegramSDKException
  * @method static boolean answerCallbackQuery(array $properties)
+ * @throws TelegramSDKException
  * @method static boolean deleteMessage(array $properties)
+ * @throws TelegramSDKException
  * @method static boolean setWebhook(array $properties)
+ * @throws TelegramSDKException
  * @method static WebhookInfo getWebhookInfo(array $properties)
+ * @throws TelegramSDKException
  */
 class TelegramBot extends Facade
 {

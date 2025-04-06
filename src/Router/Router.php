@@ -186,8 +186,6 @@ class Router
                 try {
                     $route->runAction($update);
                 } catch (Exception $e) {
-                    dd($e);
-
                     $this->runNotfound($update);
                 }
             };
