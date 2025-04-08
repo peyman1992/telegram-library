@@ -25,6 +25,8 @@ use Telegram\Bot\Objects\WebhookInfo;
  * @throws TelegramSDKException
  * @method static Message sendDocument(array $properties)
  * @throws TelegramSDKException
+ * @method static Message sendAudio(array $properties)
+ * @throws TelegramSDKException
  * @method static ChatMember getChatMember(array $properties)
  * @throws TelegramSDKException
  * @method static boolean answerCallbackQuery(array $properties)
