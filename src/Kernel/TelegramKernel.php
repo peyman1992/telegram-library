@@ -34,7 +34,9 @@ class TelegramKernel
             'bot',
             function () use ($botToken) {
                 $api = new Api($botToken);
-
+                if(config('telegram-library.is_local_url')) {
+                    $api->setBaseBotUrl(config('telegram-library.local_url'));
+                }
                 return $api;
             }
         );
