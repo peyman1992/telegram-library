@@ -186,7 +186,7 @@ class Router
                 try {
                     $route->runAction($update);
                 } catch (Exception $e) {
-                    dump($e);
+                    report($e);
                 }
             };
             $pipeline = new PipeLine($this->container, $update, $endCallBack);
