@@ -75,10 +75,11 @@ class TelegramKernel
                     $pipeline = new PipeLine($this->container, $update, $endCallBack);
                     $pipeline->run($this->middleware);
                 } catch (Throwable $e) {
-                    //todo implement error handling
-                    $handles = $this->container->make(ErrorHandler::class);
-                    $handles->report($e, $update);
-                    $handles->render($e, $update);
+                    report($e);
+//                    todo implement error handling
+//                    $handles = $this->container->make(ErrorHandler::class);
+//                    $handles->report($e, $update);
+//                    $handles->render($e, $update);
                 }
             }
         } else {
